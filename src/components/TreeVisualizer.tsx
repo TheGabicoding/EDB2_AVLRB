@@ -515,10 +515,10 @@ export const TreeVisualizer: React.FC<TreeVisualizerProps> = ({
 
               if (treeType === 'RB') {
                 if (node.color === 'RED') {
-                  fillUrl = `url(#rbRedGrad-${treeType})`;
+                  fillUrl = '#b91c1c';
                   strokeColor = '#fca5a5';
                 } else {
-                  fillUrl = `url(#rbBlackGrad-${treeType})`;
+                  fillUrl = '#0f172a';
                   strokeColor = '#94a3b8';
                 }
               }
@@ -547,7 +547,13 @@ export const TreeVisualizer: React.FC<TreeVisualizerProps> = ({
                       strokeWidth={2.5}
                       strokeDasharray={isTarget ? undefined : '4 2'}
                       filter={`url(#glow-${treeType})`}
-                      className={isRotationFocus ? 'animate-pulse' : undefined}
+                      className={
+                        isRotationFocus
+                          ? 'animate-pulse'
+                          : frameKind === 'recolor' && isFocused
+                          ? 'animate-recolor-fade'
+                          : undefined
+                      }
                     />
                   )}
 
@@ -556,7 +562,7 @@ export const TreeVisualizer: React.FC<TreeVisualizerProps> = ({
                     fill={fillUrl}
                     stroke={strokeColor}
                     strokeWidth={isTarget ? 3.5 : 2}
-                    className={frameKind === 'recolor' && isFocused ? 'animate-pulse' : undefined}
+                      style={{ transition: 'fill 850ms ease, stroke 300ms ease' }}
                   />
 
                   <text

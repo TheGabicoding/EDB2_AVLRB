@@ -22,3 +22,12 @@
 }
 
 .btn { @apply inline-flex items-center justify-center gap-1 px-2 py-2 rounded-lg text-xs font-semibold text-white transition; }
+@keyframes recolor-fade {
+  0% { opacity: 1; }
+  45% { opacity: 0.35; }
+  100% { opacity: 0; }
+}
+
+.animate-recolor-fade {
+  animation: recolor-fade 1.2s ease-out forwards;
+}

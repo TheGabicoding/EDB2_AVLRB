@@ -29,9 +29,6 @@ export class AVLNode {
 }
 
 /**
- * Implementação completa e manual da Árvore AVL (Adelson-Velsky e Landis).
- * Não utiliza bibliotecas externas de balanceamento.
- *
  * Decisões de projeto:
  * - Altura de nó nulo = 0; Altura de nó folha = 1.
  * - Fator de Balanceamento (FB) = altura(esquerda) - altura(direita).
