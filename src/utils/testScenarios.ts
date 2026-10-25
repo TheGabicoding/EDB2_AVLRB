@@ -208,11 +208,3 @@ export function runScenarioOnBothTrees(
     allStepsValid
   };
 }
-
-export function runAllBenchmarks(): ScenarioBenchmarkResult[] {
-  return TEST_SCENARIOS.map((scenario) => {
-    const avl = new AVLTree();
-    const rb = new RedBlackTree();
-    return runScenarioOnBothTrees(scenario, avl, rb);
-  });
-}

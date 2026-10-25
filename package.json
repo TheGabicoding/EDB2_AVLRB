@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "benchmark": "esbuild scripts/benchmark.ts --bundle --platform=node --format=esm --outfile=scripts/.out/benchmark.mjs && node scripts/.out/benchmark.mjs"
   },
   "dependencies": {
     "lucide-react": "^0.468.0",

@@ -1,2 +1,16 @@
-node_modules
+# Dependências e ambientes locais
+node_modules/
+.venv/
+__pycache__/
+*.py[cod]
+
+# Arquivos temporários de execução e compilação
+*.log
+scripts/.out/
 *.tsbuildinfo
+
+# Arquivos do sistema operacional
+.DS_Store
+Thumbs.db
+
+# dist/, docs/ e scripts/ permanecem versionáveis para a entrega do projeto.

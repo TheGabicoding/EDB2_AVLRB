@@ -1,0 +1,2253 @@
+{
+ "avl_rotation": {
+  "operation": "INSERT",
+  "key": 10,
+  "success": true,
+  "message": "Encomenda #10 inserida com sucesso (1 rotação(ões) aplicada(s)).",
+  "rotations": 1,
+  "recolors": 0,
+  "comparisons": 2,
+  "path": [
+   30,
+   20,
+   10
+  ],
+  "details": [
+   "Nó folha #10 alocado com altura inicial 1.",
+   "Desbalanceamento detectado no nó #30 (FB = +2). Caso Esquerda-Esquerda (LL).",
+   "Rotação à Direita (LL) no pivô #30 → #20 assumiu o topo da subárvore."
+  ],
+  "steps": [
+   {
+    "kind": "operation",
+    "title": "Estado inicial",
+    "description": "Inserção de #10: estado da árvore antes da operação.",
+    "snapshot": {
+     "key": 30,
+     "metadata": {
+      "id": 30,
+      "trackingCode": "AMZ-BF-00030",
+      "destination": "BSB-DF (Santa Maria)",
+      "priority": "Prime Express"
+     },
+     "height": 2,
+     "balanceFactor": 1,
+     "left": {
+      "key": 20,
+      "metadata": {
+       "id": 20,
+       "trackingCode": "AMZ-BF-00020",
+       "destination": "REC-PE (Cabo de Santo Agostinho)",
+       "priority": "Standard"
+      },
+      "height": 1,
+      "balanceFactor": 0,
+      "left": null,
+      "right": null
+     },
+     "right": null
+    },
+    "focusKeys": []
+   },
+   {
+    "kind": "case",
+    "title": "Caso LL identificado",
+    "description": "O nó #30 ficou com FB 2. Corrigir com rotação à direita.",
+    "snapshot": {
+     "key": 30,
+     "metadata": {
+      "id": 30,
+      "trackingCode": "AMZ-BF-00030",
+      "destination": "BSB-DF (Santa Maria)",
+      "priority": "Prime Express"
+     },
+     "height": 3,
+     "balanceFactor": 2,
+     "left": {
+      "key": 20,
+      "metadata": {
+       "id": 20,
+       "trackingCode": "AMZ-BF-00020",
+       "destination": "REC-PE (Cabo de Santo Agostinho)",
+       "priority": "Standard"
+      },
+      "height": 2,
+      "balanceFactor": 1,
+      "left": {
+       "key": 10,
+       "metadata": {
+        "id": 10,
+        "trackingCode": "AMZ-BF-00010",
+        "destination": "CNF-MG (Betim)",
+        "priority": "Same-Day"
+       },
+       "height": 1,
+       "balanceFactor": 0,
+       "left": null,
+       "right": null
+      },
+      "right": null
+     },
+     "right": null
+    },
+    "focusKeys": [
+     30,
+     20
+    ]
+   },
+   {
+    "kind": "rotation",
+    "title": "Rotação simples à direita",
+    "description": "O nó #20 sobe e o nó #30 desce para a direita.",
+    "snapshot": {
+     "key": 20,
+     "metadata": {
+      "id": 20,
+      "trackingCode": "AMZ-BF-00020",
+      "destination": "REC-PE (Cabo de Santo Agostinho)",
+      "priority": "Standard"
+     },
+     "height": 2,
+     "balanceFactor": 0,
+     "left": {
+      "key": 10,
+      "metadata": {
+       "id": 10,
+       "trackingCode": "AMZ-BF-00010",
+       "destination": "CNF-MG (Betim)",
+       "priority": "Same-Day"
+      },
+      "height": 1,
+      "balanceFactor": 0,
+      "left": null,
+      "right": null
+     },
+     "right": {
+      "key": 30,
+      "metadata": {
+       "id": 30,
+       "trackingCode": "AMZ-BF-00030",
+       "destination": "BSB-DF (Santa Maria)",
+       "priority": "Prime Express"
+      },
+      "height": 1,
+      "balanceFactor": 0,
+      "left": null,
+      "right": null
+     }
+    },
+    "focusKeys": [
+     20,
+     30
+    ]
+   },
+   {
+    "kind": "result",
+    "title": "Resultado",
+    "description": "Encomenda #10 inserida com sucesso (1 rotação(ões) aplicada(s)).",
+    "snapshot": {
+     "key": 20,
+     "metadata": {
+      "id": 20,
+      "trackingCode": "AMZ-BF-00020",
+      "destination": "REC-PE (Cabo de Santo Agostinho)",
+      "priority": "Standard"
+     },
+     "height": 2,
+     "balanceFactor": 0,
+     "left": {
+      "key": 10,
+      "metadata": {
+       "id": 10,
+       "trackingCode": "AMZ-BF-00010",
+       "destination": "CNF-MG (Betim)",
+       "priority": "Same-Day"
+      },
+      "height": 1,
+      "balanceFactor": 0,
+      "left": null,
+      "right": null
+     },
+     "right": {
+      "key": 30,
+      "metadata": {
+       "id": 30,
+       "trackingCode": "AMZ-BF-00030",
+       "destination": "BSB-DF (Santa Maria)",
+       "priority": "Prime Express"
+      },
+      "height": 1,
+      "balanceFactor": 0,
+      "left": null,
+      "right": null
+     }
+    },
+    "focusKeys": []
+   }
+  ]
+ },
+ "rb_rotation": {
+  "operation": "INSERT",
+  "key": 30,
+  "success": true,
+  "message": "Encomenda #30 inserida (1 rotação(ões), 2 recoloração(ões)).",
+  "rotations": 1,
+  "recolors": 2,
+  "comparisons": 2,
+  "path": [
+   10,
+   20,
+   30
+  ],
+  "details": [
+   "Nó #30 inserido como filho direito de #20 com cor VERMELHA.",
+   "Caso 3 (Tio PRETO em linha) → Recolore pai #20 para PRETO, avô #10 para VERMELHO e rotaciona o avô à Esquerda.",
+   "Rotação à Esquerda no nó #10 → #20 subiu na subárvore."
+  ],
+  "steps": [
+   {
+    "kind": "operation",
+    "title": "Estado inicial",
+    "description": "Inserção de #30: estado da árvore antes da operação.",
+    "snapshot": {
+     "key": 10,
+     "metadata": {
+      "id": 10,
+      "trackingCode": "AMZ-BF-00010",
+      "destination": "CNF-MG (Betim)",
+      "priority": "Same-Day"
+     },
+     "height": 2,
+     "color": "BLACK",
+     "blackHeight": 1,
+     "left": null,
+     "right": {
+      "key": 20,
+      "metadata": {
+       "id": 20,
+       "trackingCode": "AMZ-BF-00020",
+       "destination": "REC-PE (Cabo de Santo Agostinho)",
+       "priority": "Standard"
+      },
+      "height": 1,
+      "color": "RED",
+      "blackHeight": 0,
+      "left": null,
+      "right": null
+     }
+    },
+    "focusKeys": []
+   },
+   {
+    "kind": "operation",
+    "title": "Nó inserido em vermelho",
+    "description": "A chave #30 foi adicionada como folha vermelha antes da verificação de balanceamento.",
+    "snapshot": {
+     "key": 10,
+     "metadata": {
+      "id": 10,
+      "trackingCode": "AMZ-BF-00010",
+      "destination": "CNF-MG (Betim)",
+      "priority": "Same-Day"
+     },
+     "height": 3,
+     "color": "BLACK",
+     "blackHeight": 1,
+     "left": null,
+     "right": {
+      "key": 20,
+      "metadata": {
+       "id": 20,
+       "trackingCode": "AMZ-BF-00020",
+       "destination": "REC-PE (Cabo de Santo Agostinho)",
+       "priority": "Standard"
+      },
+      "height": 2,
+      "color": "RED",
+      "blackHeight": 0,
+      "left": null,
+      "right": {
+       "key": 30,
+       "metadata": {
+        "id": 30,
+        "trackingCode": "AMZ-BF-00030",
+        "destination": "BSB-DF (Santa Maria)",
+        "priority": "Prime Express"
+       },
+       "height": 1,
+       "color": "RED",
+       "blackHeight": 0,
+       "left": null,
+       "right": null
+      }
+     }
+    },
+    "focusKeys": []
+   },
+   {
+    "kind": "case",
+    "title": "Caso 3 de inserção: linha",
+    "description": "Há conflito rubro-rubro; o tio é preto e #30, seu pai e o avô formam uma linha. Recolorir pai e avô e rotacionar o avô.",
+    "snapshot": {
+     "key": 10,
+     "metadata": {
+      "id": 10,
+      "trackingCode": "AMZ-BF-00010",
+      "destination": "CNF-MG (Betim)",
+      "priority": "Same-Day"
+     },
+     "height": 3,
+     "color": "BLACK",
+     "blackHeight": 1,
+     "left": null,
+     "right": {
+      "key": 20,
+      "metadata": {
+       "id": 20,
+       "trackingCode": "AMZ-BF-00020",
+       "destination": "REC-PE (Cabo de Santo Agostinho)",
+       "priority": "Standard"
+      },
+      "height": 2,
+      "color": "RED",
+      "blackHeight": 0,
+      "left": null,
+      "right": {
+       "key": 30,
+       "metadata": {
+        "id": 30,
+        "trackingCode": "AMZ-BF-00030",
+        "destination": "BSB-DF (Santa Maria)",
+        "priority": "Prime Express"
+       },
+       "height": 1,
+       "color": "RED",
+       "blackHeight": 0,
+       "left": null,
+       "right": null
+      }
+     }
+    },
+    "focusKeys": [
+     30,
+     20,
+     10
+    ]
+   },
+   {
+    "kind": "recolor",
+    "title": "Recolorir nó #20",
+    "description": "A cor do nó #20 mudou de vermelho para preto.",
+    "snapshot": {
+     "key": 10,
+     "metadata": {
+      "id": 10,
+      "trackingCode": "AMZ-BF-00010",
+      "destination": "CNF-MG (Betim)",
+      "priority": "Same-Day"
+     },
+     "height": 3,
+     "color": "BLACK",
+     "blackHeight": 1,
+     "left": null,
+     "right": {
+      "key": 20,
+      "metadata": {
+       "id": 20,
+       "trackingCode": "AMZ-BF-00020",
+       "destination": "REC-PE (Cabo de Santo Agostinho)",
+       "priority": "Standard"
+      },
+      "height": 2,
+      "color": "BLACK",
+      "blackHeight": 1,
+      "left": null,
+      "right": {
+       "key": 30,
+       "metadata": {
+        "id": 30,
+        "trackingCode": "AMZ-BF-00030",
+        "destination": "BSB-DF (Santa Maria)",
+        "priority": "Prime Express"
+       },
+       "height": 1,
+       "color": "RED",
+       "blackHeight": 0,
+       "left": null,
+       "right": null
+      }
+     }
+    },
+    "focusKeys": [
+     20
+    ]
+   },
+   {
+    "kind": "recolor",
+    "title": "Recolorir nó #10",
+    "description": "A cor do nó #10 mudou de preto para vermelho.",
+    "snapshot": {
+     "key": 10,
+     "metadata": {
+      "id": 10,
+      "trackingCode": "AMZ-BF-00010",
+      "destination": "CNF-MG (Betim)",
+      "priority": "Same-Day"
+     },
+     "height": 3,
+     "color": "RED",
+     "blackHeight": 0,
+     "left": null,
+     "right": {
+      "key": 20,
+      "metadata": {
+       "id": 20,
+       "trackingCode": "AMZ-BF-00020",
+       "destination": "REC-PE (Cabo de Santo Agostinho)",
+       "priority": "Standard"
+      },
+      "height": 2,
+      "color": "BLACK",
+      "blackHeight": 1,
+      "left": null,
+      "right": {
+       "key": 30,
+       "metadata": {
+        "id": 30,
+        "trackingCode": "AMZ-BF-00030",
+        "destination": "BSB-DF (Santa Maria)",
+        "priority": "Prime Express"
+       },
+       "height": 1,
+       "color": "RED",
+       "blackHeight": 0,
+       "left": null,
+       "right": null
+      }
+     }
+    },
+    "focusKeys": [
+     10
+    ]
+   },
+   {
+    "kind": "rotation",
+    "title": "Rotação à esquerda",
+    "description": "O nó #20 sobe; o nó #10 desce para a esquerda.",
+    "snapshot": {
+     "key": 20,
+     "metadata": {
+      "id": 20,
+      "trackingCode": "AMZ-BF-00020",
+      "destination": "REC-PE (Cabo de Santo Agostinho)",
+      "priority": "Standard"
+     },
+     "height": 2,
+     "color": "BLACK",
+     "blackHeight": 1,
+     "left": {
+      "key": 10,
+      "metadata": {
+       "id": 10,
+       "trackingCode": "AMZ-BF-00010",
+       "destination": "CNF-MG (Betim)",
+       "priority": "Same-Day"
+      },
+      "height": 1,
+      "color": "RED",
+      "blackHeight": 0,
+      "left": null,
+      "right": null
+     },
+     "right": {
+      "key": 30,
+      "metadata": {
+       "id": 30,
+       "trackingCode": "AMZ-BF-00030",
+       "destination": "BSB-DF (Santa Maria)",
+       "priority": "Prime Express"
+      },
+      "height": 1,
+      "color": "RED",
+      "blackHeight": 0,
+      "left": null,
+      "right": null
+     }
+    },
+    "focusKeys": [
+     10,
+     20
+    ]
+   },
+   {
+    "kind": "result",
+    "title": "Resultado",
+    "description": "Encomenda #30 inserida (1 rotação(ões), 2 recoloração(ões)).",
+    "snapshot": {
+     "key": 20,
+     "metadata": {
+      "id": 20,
+      "trackingCode": "AMZ-BF-00020",
+      "destination": "REC-PE (Cabo de Santo Agostinho)",
+      "priority": "Standard"
+     },
+     "height": 2,
+     "color": "BLACK",
+     "blackHeight": 1,
+     "left": {
+      "key": 10,
+      "metadata": {
+       "id": 10,
+       "trackingCode": "AMZ-BF-00010",
+       "destination": "CNF-MG (Betim)",
+       "priority": "Same-Day"
+      },
+      "height": 1,
+      "color": "RED",
+      "blackHeight": 0,
+      "left": null,
+      "right": null
+     },
+     "right": {
+      "key": 30,
+      "metadata": {
+       "id": 30,
+       "trackingCode": "AMZ-BF-00030",
+       "destination": "BSB-DF (Santa Maria)",
+       "priority": "Prime Express"
+      },
+      "height": 1,
+      "color": "RED",
+      "blackHeight": 0,
+      "left": null,
+      "right": null
+     }
+    },
+    "focusKeys": []
+   }
+  ]
+ },
+ "rb_recolor": {
+  "operation": "INSERT",
+  "key": 1,
+  "success": true,
+  "message": "Encomenda #1 inserida (0 rotação(ões), 4 recoloração(ões)).",
+  "rotations": 0,
+  "recolors": 4,
+  "comparisons": 2,
+  "path": [
+   10,
+   5,
+   1
+  ],
+  "details": [
+   "Nó #1 inserido como filho esquerdo de #5 com cor VERMELHA.",
+   "Conflito Rubro-Rubro (#5 e #1): Caso 1 (Tio #15 é VERMELHO) → Recolorindo pai e tio para PRETO e avô #10 para VERMELHO.",
+   "Propriedade 2 garantida: Raiz #10 definida como PRETA."
+  ],
+  "steps": [
+   {
+    "kind": "operation",
+    "title": "Estado inicial",
+    "description": "Inserção de #1: estado da árvore antes da operação.",
+    "snapshot": {
+     "key": 10,
+     "metadata": {
+      "id": 10,
+      "trackingCode": "AMZ-BF-00010",
+      "destination": "CNF-MG (Betim)",
+      "priority": "Same-Day"
+     },
+     "height": 2,
+     "color": "BLACK",
+     "blackHeight": 1,
+     "left": {
+      "key": 5,
+      "metadata": {
+       "id": 5,
+       "trackingCode": "TBA-BR-00005",
+       "destination": "POA-RS (Nova Santa Rita)",
+       "priority": "Standard"
+      },
+      "height": 1,
+      "color": "RED",
+      "blackHeight": 0,
+      "left": null,
+      "right": null
+     },
+     "right": {
+      "key": 15,
+      "metadata": {
+       "id": 15,
+       "trackingCode": "TBA-BR-00015",
+       "destination": "CWB-PR ( Araucária)",
+       "priority": "Prime Express"
+      },
+      "height": 1,
+      "color": "RED",
+      "blackHeight": 0,
+      "left": null,
+      "right": null
+     }
+    },
+    "focusKeys": []
+   },
+   {
+    "kind": "operation",
+    "title": "Nó inserido em vermelho",
+    "description": "A chave #1 foi adicionada como folha vermelha antes da verificação de balanceamento.",
+    "snapshot": {
+     "key": 10,
+     "metadata": {
+      "id": 10,
+      "trackingCode": "AMZ-BF-00010",
+      "destination": "CNF-MG (Betim)",
+      "priority": "Same-Day"
+     },
+     "height": 3,
+     "color": "BLACK",
+     "blackHeight": 1,
+     "left": {
+      "key": 5,
+      "metadata": {
+       "id": 5,
+       "trackingCode": "TBA-BR-00005",
+       "destination": "POA-RS (Nova Santa Rita)",
+       "priority": "Standard"
+      },
+      "height": 2,
+      "color": "RED",
+      "blackHeight": 0,
+      "left": {
+       "key": 1,
+       "metadata": {
+        "id": 1,
+        "trackingCode": "TBA-BR-00001",
+        "destination": "GIG-RJ (São João de Meriti)",
+        "priority": "Same-Day"
+       },
+       "height": 1,
+       "color": "RED",
+       "blackHeight": 0,
+       "left": null,
+       "right": null
+      },
+      "right": null
+     },
+     "right": {
+      "key": 15,
+      "metadata": {
+       "id": 15,
+       "trackingCode": "TBA-BR-00015",
+       "destination": "CWB-PR ( Araucária)",
+       "priority": "Prime Express"
+      },
+      "height": 1,
+      "color": "RED",
+      "blackHeight": 0,
+      "left": null,
+      "right": null
+     }
+    },
+    "focusKeys": []
+   },
+   {
+    "kind": "case",
+    "title": "Caso 1 de inserção: tio vermelho",
+    "description": "Pai #5 e tio #15 ficam pretos; avô #10 fica vermelho.",
+    "snapshot": {
+     "key": 10,
+     "metadata": {
+      "id": 10,
+      "trackingCode": "AMZ-BF-00010",
+      "destination": "CNF-MG (Betim)",
+      "priority": "Same-Day"
+     },
+     "height": 3,
+     "color": "BLACK",
+     "blackHeight": 1,
+     "left": {
+      "key": 5,
+      "metadata": {
+       "id": 5,
+       "trackingCode": "TBA-BR-00005",
+       "destination": "POA-RS (Nova Santa Rita)",
+       "priority": "Standard"
+      },
+      "height": 2,
+      "color": "RED",
+      "blackHeight": 0,
+      "left": {
+       "key": 1,
+       "metadata": {
+        "id": 1,
+        "trackingCode": "TBA-BR-00001",
+        "destination": "GIG-RJ (São João de Meriti)",
+        "priority": "Same-Day"
+       },
+       "height": 1,
+       "color": "RED",
+       "blackHeight": 0,
+       "left": null,
+       "right": null
+      },
+      "right": null
+     },
+     "right": {
+      "key": 15,
+      "metadata": {
+       "id": 15,
+       "trackingCode": "TBA-BR-00015",
+       "destination": "CWB-PR ( Araucária)",
+       "priority": "Prime Express"
+      },
+      "height": 1,
+      "color": "RED",
+      "blackHeight": 0,
+      "left": null,
+      "right": null
+     }
+    },
+    "focusKeys": [
+     1,
+     5,
+     15,
+     10
+    ]
+   },
+   {
+    "kind": "recolor",
+    "title": "Recolorir nó #5",
+    "description": "A cor do nó #5 mudou de vermelho para preto.",
+    "snapshot": {
+     "key": 10,
+     "metadata": {
+      "id": 10,
+      "trackingCode": "AMZ-BF-00010",
+      "destination": "CNF-MG (Betim)",
+      "priority": "Same-Day"
+     },
+     "height": 3,
+     "color": "BLACK",
+     "blackHeight": 2,
+     "left": {
+      "key": 5,
+      "metadata": {
+       "id": 5,
+       "trackingCode": "TBA-BR-00005",
+       "destination": "POA-RS (Nova Santa Rita)",
+       "priority": "Standard"
+      },
+      "height": 2,
+      "color": "BLACK",
+      "blackHeight": 1,
+      "left": {
+       "key": 1,
+       "metadata": {
+        "id": 1,
+        "trackingCode": "TBA-BR-00001",
+        "destination": "GIG-RJ (São João de Meriti)",
+        "priority": "Same-Day"
+       },
+       "height": 1,
+       "color": "RED",
+       "blackHeight": 0,
+       "left": null,
+       "right": null
+      },
+      "right": null
+     },
+     "right": {
+      "key": 15,
+      "metadata": {
+       "id": 15,
+       "trackingCode": "TBA-BR-00015",
+       "destination": "CWB-PR ( Araucária)",
+       "priority": "Prime Express"
+      },
+      "height": 1,
+      "color": "RED",
+      "blackHeight": 0,
+      "left": null,
+      "right": null
+     }
+    },
+    "focusKeys": [
+     5
+    ]
+   },
+   {
+    "kind": "recolor",
+    "title": "Recolorir nó #15",
+    "description": "A cor do nó #15 mudou de vermelho para preto.",
+    "snapshot": {
+     "key": 10,
+     "metadata": {
+      "id": 10,
+      "trackingCode": "AMZ-BF-00010",
+      "destination": "CNF-MG (Betim)",
+      "priority": "Same-Day"
+     },
+     "height": 3,
+     "color": "BLACK",
+     "blackHeight": 2,
+     "left": {
+      "key": 5,
+      "metadata": {
+       "id": 5,
+       "trackingCode": "TBA-BR-00005",
+       "destination": "POA-RS (Nova Santa Rita)",
+       "priority": "Standard"
+      },
+      "height": 2,
+      "color": "BLACK",
+      "blackHeight": 1,
+      "left": {
+       "key": 1,
+       "metadata": {
+        "id": 1,
+        "trackingCode": "TBA-BR-00001",
+        "destination": "GIG-RJ (São João de Meriti)",
+        "priority": "Same-Day"
+       },
+       "height": 1,
+       "color": "RED",
+       "blackHeight": 0,
+       "left": null,
+       "right": null
+      },
+      "right": null
+     },
+     "right": {
+      "key": 15,
+      "metadata": {
+       "id": 15,
+       "trackingCode": "TBA-BR-00015",
+       "destination": "CWB-PR ( Araucária)",
+       "priority": "Prime Express"
+      },
+      "height": 1,
+      "color": "BLACK",
+      "blackHeight": 1,
+      "left": null,
+      "right": null
+     }
+    },
+    "focusKeys": [
+     15
+    ]
+   },
+   {
+    "kind": "recolor",
+    "title": "Recolorir nó #10",
+    "description": "A cor do nó #10 mudou de preto para vermelho.",
+    "snapshot": {
+     "key": 10,
+     "metadata": {
+      "id": 10,
+      "trackingCode": "AMZ-BF-00010",
+      "destination": "CNF-MG (Betim)",
+      "priority": "Same-Day"
+     },
+     "height": 3,
+     "color": "RED",
+     "blackHeight": 1,
+     "left": {
+      "key": 5,
+      "metadata": {
+       "id": 5,
+       "trackingCode": "TBA-BR-00005",
+       "destination": "POA-RS (Nova Santa Rita)",
+       "priority": "Standard"
+      },
+      "height": 2,
+      "color": "BLACK",
+      "blackHeight": 1,
+      "left": {
+       "key": 1,
+       "metadata": {
+        "id": 1,
+        "trackingCode": "TBA-BR-00001",
+        "destination": "GIG-RJ (São João de Meriti)",
+        "priority": "Same-Day"
+       },
+       "height": 1,
+       "color": "RED",
+       "blackHeight": 0,
+       "left": null,
+       "right": null
+      },
+      "right": null
+     },
+     "right": {
+      "key": 15,
+      "metadata": {
+       "id": 15,
+       "trackingCode": "TBA-BR-00015",
+       "destination": "CWB-PR ( Araucária)",
+       "priority": "Prime Express"
+      },
+      "height": 1,
+      "color": "BLACK",
+      "blackHeight": 1,
+      "left": null,
+      "right": null
+     }
+    },
+    "focusKeys": [
+     10
+    ]
+   },
+   {
+    "kind": "recolor",
+    "title": "Recolorir nó #10",
+    "description": "Propriedade 2 garantida: Raiz #10 definida como PRETA.",
+    "snapshot": {
+     "key": 10,
+     "metadata": {
+      "id": 10,
+      "trackingCode": "AMZ-BF-00010",
+      "destination": "CNF-MG (Betim)",
+      "priority": "Same-Day"
+     },
+     "height": 3,
+     "color": "BLACK",
+     "blackHeight": 2,
+     "left": {
+      "key": 5,
+      "metadata": {
+       "id": 5,
+       "trackingCode": "TBA-BR-00005",
+       "destination": "POA-RS (Nova Santa Rita)",
+       "priority": "Standard"
+      },
+      "height": 2,
+      "color": "BLACK",
+      "blackHeight": 1,
+      "left": {
+       "key": 1,
+       "metadata": {
+        "id": 1,
+        "trackingCode": "TBA-BR-00001",
+        "destination": "GIG-RJ (São João de Meriti)",
+        "priority": "Same-Day"
+       },
+       "height": 1,
+       "color": "RED",
+       "blackHeight": 0,
+       "left": null,
+       "right": null
+      },
+      "right": null
+     },
+     "right": {
+      "key": 15,
+      "metadata": {
+       "id": 15,
+       "trackingCode": "TBA-BR-00015",
+       "destination": "CWB-PR ( Araucária)",
+       "priority": "Prime Express"
+      },
+      "height": 1,
+      "color": "BLACK",
+      "blackHeight": 1,
+      "left": null,
+      "right": null
+     }
+    },
+    "focusKeys": [
+     10
+    ]
+   },
+   {
+    "kind": "result",
+    "title": "Resultado",
+    "description": "Encomenda #1 inserida (0 rotação(ões), 4 recoloração(ões)).",
+    "snapshot": {
+     "key": 10,
+     "metadata": {
+      "id": 10,
+      "trackingCode": "AMZ-BF-00010",
+      "destination": "CNF-MG (Betim)",
+      "priority": "Same-Day"
+     },
+     "height": 3,
+     "color": "BLACK",
+     "blackHeight": 2,
+     "left": {
+      "key": 5,
+      "metadata": {
+       "id": 5,
+       "trackingCode": "TBA-BR-00005",
+       "destination": "POA-RS (Nova Santa Rita)",
+       "priority": "Standard"
+      },
+      "height": 2,
+      "color": "BLACK",
+      "blackHeight": 1,
+      "left": {
+       "key": 1,
+       "metadata": {
+        "id": 1,
+        "trackingCode": "TBA-BR-00001",
+        "destination": "GIG-RJ (São João de Meriti)",
+        "priority": "Same-Day"
+       },
+       "height": 1,
+       "color": "RED",
+       "blackHeight": 0,
+       "left": null,
+       "right": null
+      },
+      "right": null
+     },
+     "right": {
+      "key": 15,
+      "metadata": {
+       "id": 15,
+       "trackingCode": "TBA-BR-00015",
+       "destination": "CWB-PR ( Araucária)",
+       "priority": "Prime Express"
+      },
+      "height": 1,
+      "color": "BLACK",
+      "blackHeight": 1,
+      "left": null,
+      "right": null
+     }
+    },
+    "focusKeys": []
+   }
+  ]
+ },
+ "ascending5": {
+  "avl": {
+   "key": 20,
+   "metadata": {
+    "id": 20,
+    "trackingCode": "AMZ-BF-00020",
+    "destination": "REC-PE (Cabo de Santo Agostinho)",
+    "priority": "Standard"
+   },
+   "height": 3,
+   "balanceFactor": -1,
+   "left": {
+    "key": 10,
+    "metadata": {
+     "id": 10,
+     "trackingCode": "AMZ-BF-00010",
+     "destination": "CNF-MG (Betim)",
+     "priority": "Same-Day"
+    },
+    "height": 1,
+    "balanceFactor": 0,
+    "left": null,
+    "right": null
+   },
+   "right": {
+    "key": 40,
+    "metadata": {
+     "id": 40,
+     "trackingCode": "AMZ-BF-00040",
+     "destination": "GRU-SP (Cajamar)",
+     "priority": "Same-Day"
+    },
+    "height": 2,
+    "balanceFactor": 0,
+    "left": {
+     "key": 30,
+     "metadata": {
+      "id": 30,
+      "trackingCode": "AMZ-BF-00030",
+      "destination": "BSB-DF (Santa Maria)",
+      "priority": "Prime Express"
+     },
+     "height": 1,
+     "balanceFactor": 0,
+     "left": null,
+     "right": null
+    },
+    "right": {
+     "key": 50,
+     "metadata": {
+      "id": 50,
+      "trackingCode": "AMZ-BF-00050",
+      "destination": "CNF-MG (Betim)",
+      "priority": "Standard"
+     },
+     "height": 1,
+     "balanceFactor": 0,
+     "left": null,
+     "right": null
+    }
+   }
+  },
+  "rb": {
+   "key": 20,
+   "metadata": {
+    "id": 20,
+    "trackingCode": "AMZ-BF-00020",
+    "destination": "REC-PE (Cabo de Santo Agostinho)",
+    "priority": "Standard"
+   },
+   "height": 3,
+   "color": "BLACK",
+   "blackHeight": 2,
+   "left": {
+    "key": 10,
+    "metadata": {
+     "id": 10,
+     "trackingCode": "AMZ-BF-00010",
+     "destination": "CNF-MG (Betim)",
+     "priority": "Same-Day"
+    },
+    "height": 1,
+    "color": "BLACK",
+    "blackHeight": 1,
+    "left": null,
+    "right": null
+   },
+   "right": {
+    "key": 40,
+    "metadata": {
+     "id": 40,
+     "trackingCode": "AMZ-BF-00040",
+     "destination": "GRU-SP (Cajamar)",
+     "priority": "Same-Day"
+    },
+    "height": 2,
+    "color": "BLACK",
+    "blackHeight": 1,
+    "left": {
+     "key": 30,
+     "metadata": {
+      "id": 30,
+      "trackingCode": "AMZ-BF-00030",
+      "destination": "BSB-DF (Santa Maria)",
+      "priority": "Prime Express"
+     },
+     "height": 1,
+     "color": "RED",
+     "blackHeight": 0,
+     "left": null,
+     "right": null
+    },
+    "right": {
+     "key": 50,
+     "metadata": {
+      "id": 50,
+      "trackingCode": "AMZ-BF-00050",
+      "destination": "CNF-MG (Betim)",
+      "priority": "Standard"
+     },
+     "height": 1,
+     "color": "RED",
+     "blackHeight": 0,
+     "left": null,
+     "right": null
+    }
+   }
+  },
+  "avlHeight": 3,
+  "rbHeight": 3
+ },
+ "demo_avl": {
+  "log": [
+   {
+    "operation": "INSERT",
+    "key": 50,
+    "success": true,
+    "message": "Encomenda #50 inserida com sucesso (sem necessidade de rotação).",
+    "rotations": 0,
+    "recolors": 0,
+    "comparisons": 0,
+    "path": [
+     50
+    ],
+    "details": [
+     "Nó folha #50 alocado com altura inicial 1."
+    ],
+    "steps": []
+   },
+   {
+    "operation": "INSERT",
+    "key": 20,
+    "success": true,
+    "message": "Encomenda #20 inserida com sucesso (sem necessidade de rotação).",
+    "rotations": 0,
+    "recolors": 0,
+    "comparisons": 1,
+    "path": [
+     50,
+     20
+    ],
+    "details": [
+     "Nó folha #20 alocado com altura inicial 1."
+    ],
+    "steps": []
+   },
+   {
+    "operation": "INSERT",
+    "key": 80,
+    "success": true,
+    "message": "Encomenda #80 inserida com sucesso (sem necessidade de rotação).",
+    "rotations": 0,
+    "recolors": 0,
+    "comparisons": 1,
+    "path": [
+     50,
+     80
+    ],
+    "details": [
+     "Nó folha #80 alocado com altura inicial 1."
+    ],
+    "steps": []
+   },
+   {
+    "operation": "INSERT",
+    "key": 10,
+    "success": true,
+    "message": "Encomenda #10 inserida com sucesso (sem necessidade de rotação).",
+    "rotations": 0,
+    "recolors": 0,
+    "comparisons": 2,
+    "path": [
+     50,
+     20,
+     10
+    ],
+    "details": [
+     "Nó folha #10 alocado com altura inicial 1."
+    ],
+    "steps": []
+   },
+   {
+    "operation": "INSERT",
+    "key": 30,
+    "success": true,
+    "message": "Encomenda #30 inserida com sucesso (sem necessidade de rotação).",
+    "rotations": 0,
+    "recolors": 0,
+    "comparisons": 2,
+    "path": [
+     50,
+     20,
+     30
+    ],
+    "details": [
+     "Nó folha #30 alocado com altura inicial 1."
+    ],
+    "steps": []
+   },
+   {
+    "operation": "INSERT",
+    "key": 25,
+    "success": true,
+    "message": "Encomenda #25 inserida com sucesso (2 rotação(ões) aplicada(s)).",
+    "rotations": 2,
+    "recolors": 0,
+    "comparisons": 3,
+    "path": [
+     50,
+     20,
+     30,
+     25
+    ],
+    "details": [
+     "Nó folha #25 alocado com altura inicial 1.",
+     "Desbalanceamento detectado no nó #50 (FB = +2). Caso Esquerda-Direita (LR - Rotação Dupla).",
+     "Rotação à Esquerda (RR) no pivô #20 → #30 assumiu o topo da subárvore.",
+     "Rotação à Direita (LL) no pivô #50 → #30 assumiu o topo da subárvore."
+    ],
+    "steps": []
+   },
+   {
+    "operation": "INSERT",
+    "key": 30,
+    "success": false,
+    "message": "Inserção rejeitada: Encomenda #30 já está registrada.",
+    "rotations": 0,
+    "recolors": 0,
+    "comparisons": 1,
+    "path": [
+     30
+    ],
+    "details": [
+     "Chave #30 já existe na árvore. Decisão de projeto: duplicatas são rejeitadas para preservar unicidade dos pacotes."
+    ],
+    "steps": []
+   },
+   {
+    "operation": "SEARCH",
+    "key": 25,
+    "success": true,
+    "message": "Encomenda #25 encontrada em 3 comparação(ões)! Destino: GIG-RJ (São João de Meriti).",
+    "rotations": 0,
+    "recolors": 0,
+    "comparisons": 3,
+    "path": [
+     30,
+     20,
+     25
+    ],
+    "details": [
+     "Encomenda #25 (TBA-BR-00025) localizada no nível 2 após 3 comparação(ões).",
+     "Caminho percorrido: #30 → #20 → #25"
+    ],
+    "steps": []
+   },
+   {
+    "operation": "SEARCH",
+    "key": 999,
+    "success": false,
+    "message": "Encomenda #999 não encontrada (3 comparação(ões)).",
+    "rotations": 0,
+    "recolors": 0,
+    "comparisons": 3,
+    "path": [
+     30,
+     50,
+     80
+    ],
+    "details": [
+     "Busca encerrada em ponteiro nulo após 3 comparação(ões).",
+     "Caminho percorrido: #30 → #50 → #80 → NULL"
+    ],
+    "steps": []
+   },
+   {
+    "operation": "REMOVE",
+    "key": 20,
+    "success": true,
+    "message": "Encomenda #20 removida com sucesso.",
+    "rotations": 0,
+    "recolors": 0,
+    "comparisons": 3,
+    "path": [
+     30,
+     20,
+     25
+    ],
+    "details": [
+     "Nó #20 possuía 2 filhos. Substituído pelo sucessor em-ordem #25.",
+     "Nó #25 era folha (0 filhos) e foi removido diretamente."
+    ],
+    "steps": []
+   },
+   {
+    "operation": "REMOVE",
+    "key": 404,
+    "success": false,
+    "message": "Remoção não realizada: Encomenda #404 inexistente no sistema.",
+    "rotations": 0,
+    "recolors": 0,
+    "comparisons": 3,
+    "path": [
+     30,
+     50,
+     80
+    ],
+    "details": [
+     "Chave #404 não foi localizada para remoção."
+    ],
+    "steps": []
+   }
+  ],
+  "afterInserts": {
+   "key": 30,
+   "metadata": {
+    "id": 30,
+    "trackingCode": "AMZ-BF-00030",
+    "destination": "BSB-DF (Santa Maria)",
+    "priority": "Prime Express"
+   },
+   "height": 3,
+   "balanceFactor": 0,
+   "left": {
+    "key": 20,
+    "metadata": {
+     "id": 20,
+     "trackingCode": "AMZ-BF-00020",
+     "destination": "REC-PE (Cabo de Santo Agostinho)",
+     "priority": "Standard"
+    },
+    "height": 2,
+    "balanceFactor": 0,
+    "left": {
+     "key": 10,
+     "metadata": {
+      "id": 10,
+      "trackingCode": "AMZ-BF-00010",
+      "destination": "CNF-MG (Betim)",
+      "priority": "Same-Day"
+     },
+     "height": 1,
+     "balanceFactor": 0,
+     "left": null,
+     "right": null
+    },
+    "right": {
+     "key": 25,
+     "metadata": {
+      "id": 25,
+      "trackingCode": "TBA-BR-00025",
+      "destination": "GIG-RJ (São João de Meriti)",
+      "priority": "Same-Day"
+     },
+     "height": 1,
+     "balanceFactor": 0,
+     "left": null,
+     "right": null
+    }
+   },
+   "right": {
+    "key": 50,
+    "metadata": {
+     "id": 50,
+     "trackingCode": "AMZ-BF-00050",
+     "destination": "CNF-MG (Betim)",
+     "priority": "Standard"
+    },
+    "height": 2,
+    "balanceFactor": -1,
+    "left": null,
+    "right": {
+     "key": 80,
+     "metadata": {
+      "id": 80,
+      "trackingCode": "AMZ-BF-00080",
+      "destination": "GRU-SP (Cajamar)",
+      "priority": "Standard"
+     },
+     "height": 1,
+     "balanceFactor": 0,
+     "left": null,
+     "right": null
+    }
+   }
+  },
+  "beforeRemove": {
+   "key": 30,
+   "metadata": {
+    "id": 30,
+    "trackingCode": "AMZ-BF-00030",
+    "destination": "BSB-DF (Santa Maria)",
+    "priority": "Prime Express"
+   },
+   "height": 3,
+   "balanceFactor": 0,
+   "left": {
+    "key": 20,
+    "metadata": {
+     "id": 20,
+     "trackingCode": "AMZ-BF-00020",
+     "destination": "REC-PE (Cabo de Santo Agostinho)",
+     "priority": "Standard"
+    },
+    "height": 2,
+    "balanceFactor": 0,
+    "left": {
+     "key": 10,
+     "metadata": {
+      "id": 10,
+      "trackingCode": "AMZ-BF-00010",
+      "destination": "CNF-MG (Betim)",
+      "priority": "Same-Day"
+     },
+     "height": 1,
+     "balanceFactor": 0,
+     "left": null,
+     "right": null
+    },
+    "right": {
+     "key": 25,
+     "metadata": {
+      "id": 25,
+      "trackingCode": "TBA-BR-00025",
+      "destination": "GIG-RJ (São João de Meriti)",
+      "priority": "Same-Day"
+     },
+     "height": 1,
+     "balanceFactor": 0,
+     "left": null,
+     "right": null
+    }
+   },
+   "right": {
+    "key": 50,
+    "metadata": {
+     "id": 50,
+     "trackingCode": "AMZ-BF-00050",
+     "destination": "CNF-MG (Betim)",
+     "priority": "Standard"
+    },
+    "height": 2,
+    "balanceFactor": -1,
+    "left": null,
+    "right": {
+     "key": 80,
+     "metadata": {
+      "id": 80,
+      "trackingCode": "AMZ-BF-00080",
+      "destination": "GRU-SP (Cajamar)",
+      "priority": "Standard"
+     },
+     "height": 1,
+     "balanceFactor": 0,
+     "left": null,
+     "right": null
+    }
+   }
+  },
+  "afterRemove": {
+   "key": 30,
+   "metadata": {
+    "id": 30,
+    "trackingCode": "AMZ-BF-00030",
+    "destination": "BSB-DF (Santa Maria)",
+    "priority": "Prime Express"
+   },
+   "height": 3,
+   "balanceFactor": 0,
+   "left": {
+    "key": 25,
+    "metadata": {
+     "id": 25,
+     "trackingCode": "TBA-BR-00025",
+     "destination": "GIG-RJ (São João de Meriti)",
+     "priority": "Same-Day"
+    },
+    "height": 2,
+    "balanceFactor": 1,
+    "left": {
+     "key": 10,
+     "metadata": {
+      "id": 10,
+      "trackingCode": "AMZ-BF-00010",
+      "destination": "CNF-MG (Betim)",
+      "priority": "Same-Day"
+     },
+     "height": 1,
+     "balanceFactor": 0,
+     "left": null,
+     "right": null
+    },
+    "right": null
+   },
+   "right": {
+    "key": 50,
+    "metadata": {
+     "id": 50,
+     "trackingCode": "AMZ-BF-00050",
+     "destination": "CNF-MG (Betim)",
+     "priority": "Standard"
+    },
+    "height": 2,
+    "balanceFactor": -1,
+    "left": null,
+    "right": {
+     "key": 80,
+     "metadata": {
+      "id": 80,
+      "trackingCode": "AMZ-BF-00080",
+      "destination": "GRU-SP (Cajamar)",
+      "priority": "Standard"
+     },
+     "height": 1,
+     "balanceFactor": 0,
+     "left": null,
+     "right": null
+    }
+   }
+  },
+  "inOrder": [
+   10,
+   25,
+   30,
+   50,
+   80
+  ],
+  "metrics": {
+   "nodeCount": 5,
+   "height": 3,
+   "totalRotations": 2,
+   "leftRotations": 1,
+   "rightRotations": 1,
+   "doubleRotations": 1,
+   "recolorings": 0,
+   "totalComparisons": 22,
+   "successfulInserts": 6,
+   "duplicateAttempts": 1,
+   "successfulRemovals": 1,
+   "missingRemovals": 1,
+   "successfulSearches": 1,
+   "missingSearches": 1
+  },
+  "valid": {
+   "isValid": true,
+   "checks": [
+    {
+     "name": "Propriedade de Busca Binária (BST)",
+     "passed": true,
+     "description": "Todos os nós à esquerda são menores e à direita são maiores que o pai."
+    },
+    {
+     "name": "Invariante de Balanceamento AVL (|FB| ≤ 1)",
+     "passed": true,
+     "description": "Todos os nós possuem FB ∈ {-1, 0, +1}. Maior |FB| atual = 1."
+    },
+    {
+     "name": "Consistência de Alturas das Subárvores",
+     "passed": true,
+     "description": "Alturas recalculadas conferem com os metadados de cada nó (Altura total = 3)."
+    }
+   ]
+  }
+ },
+ "demo_rb": {
+  "log": [
+   {
+    "operation": "INSERT",
+    "key": 50,
+    "success": true,
+    "message": "Encomenda #50 inserida (0 rotação(ões), 1 recoloração(ões)).",
+    "rotations": 0,
+    "recolors": 1,
+    "comparisons": 0,
+    "path": [
+     50
+    ],
+    "details": [
+     "Nó #50 inserido como raiz inicial (inicialmente VERMELHO).",
+     "Propriedade 2 garantida: Raiz #50 definida como PRETA."
+    ],
+    "steps": []
+   },
+   {
+    "operation": "INSERT",
+    "key": 20,
+    "success": true,
+    "message": "Encomenda #20 inserida (0 rotação(ões), 0 recoloração(ões)).",
+    "rotations": 0,
+    "recolors": 0,
+    "comparisons": 1,
+    "path": [
+     50,
+     20
+    ],
+    "details": [
+     "Nó #20 inserido como filho esquerdo de #50 com cor VERMELHA."
+    ],
+    "steps": []
+   },
+   {
+    "operation": "INSERT",
+    "key": 80,
+    "success": true,
+    "message": "Encomenda #80 inserida (0 rotação(ões), 0 recoloração(ões)).",
+    "rotations": 0,
+    "recolors": 0,
+    "comparisons": 1,
+    "path": [
+     50,
+     80
+    ],
+    "details": [
+     "Nó #80 inserido como filho direito de #50 com cor VERMELHA."
+    ],
+    "steps": []
+   },
+   {
+    "operation": "INSERT",
+    "key": 10,
+    "success": true,
+    "message": "Encomenda #10 inserida (0 rotação(ões), 4 recoloração(ões)).",
+    "rotations": 0,
+    "recolors": 4,
+    "comparisons": 2,
+    "path": [
+     50,
+     20,
+     10
+    ],
+    "details": [
+     "Nó #10 inserido como filho esquerdo de #20 com cor VERMELHA.",
+     "Conflito Rubro-Rubro (#20 e #10): Caso 1 (Tio #80 é VERMELHO) → Recolorindo pai e tio para PRETO e avô #50 para VERMELHO.",
+     "Propriedade 2 garantida: Raiz #50 definida como PRETA."
+    ],
+    "steps": []
+   },
+   {
+    "operation": "INSERT",
+    "key": 30,
+    "success": true,
+    "message": "Encomenda #30 inserida (0 rotação(ões), 0 recoloração(ões)).",
+    "rotations": 0,
+    "recolors": 0,
+    "comparisons": 2,
+    "path": [
+     50,
+     20,
+     30
+    ],
+    "details": [
+     "Nó #30 inserido como filho direito de #20 com cor VERMELHA."
+    ],
+    "steps": []
+   },
+   {
+    "operation": "INSERT",
+    "key": 25,
+    "success": true,
+    "message": "Encomenda #25 inserida (0 rotação(ões), 3 recoloração(ões)).",
+    "rotations": 0,
+    "recolors": 3,
+    "comparisons": 3,
+    "path": [
+     50,
+     20,
+     30,
+     25
+    ],
+    "details": [
+     "Nó #25 inserido como filho esquerdo de #30 com cor VERMELHA.",
+     "Conflito Rubro-Rubro (#30 e #25): Caso 1 (Tio #10 é VERMELHO) → Recolorindo pai e tio para PRETO e avô #20 para VERMELHO."
+    ],
+    "steps": []
+   },
+   {
+    "operation": "INSERT",
+    "key": 30,
+    "success": false,
+    "message": "Inserção rejeitada: Encomenda #30 já está registrada.",
+    "rotations": 0,
+    "recolors": 0,
+    "comparisons": 3,
+    "path": [
+     50,
+     20,
+     30
+    ],
+    "details": [
+     "Chave #30 já existe na árvore Rubro-Negra. Inserção ignorada conforme regra de unicidade de pacotes."
+    ],
+    "steps": []
+   },
+   {
+    "operation": "SEARCH",
+    "key": 25,
+    "success": true,
+    "message": "Encomenda #25 encontrada em 4 comparação(ões)! Cor do nó: RED.",
+    "rotations": 0,
+    "recolors": 0,
+    "comparisons": 4,
+    "path": [
+     50,
+     20,
+     30,
+     25
+    ],
+    "details": [
+     "Encomenda #25 (TBA-BR-00025) localizada no nível 3 (cor: RED) após 4 comparação(ões).",
+     "Caminho percorrido: #50 → #20 → #30 → #25"
+    ],
+    "steps": []
+   },
+   {
+    "operation": "SEARCH",
+    "key": 999,
+    "success": false,
+    "message": "Encomenda #999 não encontrada (2 comparação(ões)).",
+    "rotations": 0,
+    "recolors": 0,
+    "comparisons": 2,
+    "path": [
+     50,
+     80
+    ],
+    "details": [
+     "Busca atingiu folha sentinela NIL após 2 comparação(ões).",
+     "Caminho percorrido: #50 → #80 → NIL"
+    ],
+    "steps": []
+   },
+   {
+    "operation": "REMOVE",
+    "key": 20,
+    "success": true,
+    "message": "Encomenda #20 removida com sucesso (0 rotação(ões), 0 recoloração(ões)).",
+    "rotations": 0,
+    "recolors": 0,
+    "comparisons": 2,
+    "path": [
+     50,
+     20
+    ],
+    "details": [
+     "Nó #20 possuía 2 filhos. Sucessor em-ordem #25 (cor original RED) assumiu seu lugar."
+    ],
+    "steps": []
+   },
+   {
+    "operation": "REMOVE",
+    "key": 404,
+    "success": false,
+    "message": "Remoção não realizada: Encomenda #404 inexistente no sistema.",
+    "rotations": 0,
+    "recolors": 0,
+    "comparisons": 2,
+    "path": [
+     50,
+     80
+    ],
+    "details": [
+     "Encomenda #404 não encontrada para remoção."
+    ],
+    "steps": []
+   }
+  ],
+  "afterInserts": {
+   "key": 50,
+   "metadata": {
+    "id": 50,
+    "trackingCode": "AMZ-BF-00050",
+    "destination": "CNF-MG (Betim)",
+    "priority": "Standard"
+   },
+   "height": 4,
+   "color": "BLACK",
+   "blackHeight": 2,
+   "left": {
+    "key": 20,
+    "metadata": {
+     "id": 20,
+     "trackingCode": "AMZ-BF-00020",
+     "destination": "REC-PE (Cabo de Santo Agostinho)",
+     "priority": "Standard"
+    },
+    "height": 3,
+    "color": "RED",
+    "blackHeight": 1,
+    "left": {
+     "key": 10,
+     "metadata": {
+      "id": 10,
+      "trackingCode": "AMZ-BF-00010",
+      "destination": "CNF-MG (Betim)",
+      "priority": "Same-Day"
+     },
+     "height": 1,
+     "color": "BLACK",
+     "blackHeight": 1,
+     "left": null,
+     "right": null
+    },
+    "right": {
+     "key": 30,
+     "metadata": {
+      "id": 30,
+      "trackingCode": "AMZ-BF-00030",
+      "destination": "BSB-DF (Santa Maria)",
+      "priority": "Prime Express"
+     },
+     "height": 2,
+     "color": "BLACK",
+     "blackHeight": 1,
+     "left": {
+      "key": 25,
+      "metadata": {
+       "id": 25,
+       "trackingCode": "TBA-BR-00025",
+       "destination": "GIG-RJ (São João de Meriti)",
+       "priority": "Same-Day"
+      },
+      "height": 1,
+      "color": "RED",
+      "blackHeight": 0,
+      "left": null,
+      "right": null
+     },
+     "right": null
+    }
+   },
+   "right": {
+    "key": 80,
+    "metadata": {
+     "id": 80,
+     "trackingCode": "AMZ-BF-00080",
+     "destination": "GRU-SP (Cajamar)",
+     "priority": "Standard"
+    },
+    "height": 1,
+    "color": "BLACK",
+    "blackHeight": 1,
+    "left": null,
+    "right": null
+   }
+  },
+  "beforeRemove": {
+   "key": 50,
+   "metadata": {
+    "id": 50,
+    "trackingCode": "AMZ-BF-00050",
+    "destination": "CNF-MG (Betim)",
+    "priority": "Standard"
+   },
+   "height": 4,
+   "color": "BLACK",
+   "blackHeight": 2,
+   "left": {
+    "key": 20,
+    "metadata": {
+     "id": 20,
+     "trackingCode": "AMZ-BF-00020",
+     "destination": "REC-PE (Cabo de Santo Agostinho)",
+     "priority": "Standard"
+    },
+    "height": 3,
+    "color": "RED",
+    "blackHeight": 1,
+    "left": {
+     "key": 10,
+     "metadata": {
+      "id": 10,
+      "trackingCode": "AMZ-BF-00010",
+      "destination": "CNF-MG (Betim)",
+      "priority": "Same-Day"
+     },
+     "height": 1,
+     "color": "BLACK",
+     "blackHeight": 1,
+     "left": null,
+     "right": null
+    },
+    "right": {
+     "key": 30,
+     "metadata": {
+      "id": 30,
+      "trackingCode": "AMZ-BF-00030",
+      "destination": "BSB-DF (Santa Maria)",
+      "priority": "Prime Express"
+     },
+     "height": 2,
+     "color": "BLACK",
+     "blackHeight": 1,
+     "left": {
+      "key": 25,
+      "metadata": {
+       "id": 25,
+       "trackingCode": "TBA-BR-00025",
+       "destination": "GIG-RJ (São João de Meriti)",
+       "priority": "Same-Day"
+      },
+      "height": 1,
+      "color": "RED",
+      "blackHeight": 0,
+      "left": null,
+      "right": null
+     },
+     "right": null
+    }
+   },
+   "right": {
+    "key": 80,
+    "metadata": {
+     "id": 80,
+     "trackingCode": "AMZ-BF-00080",
+     "destination": "GRU-SP (Cajamar)",
+     "priority": "Standard"
+    },
+    "height": 1,
+    "color": "BLACK",
+    "blackHeight": 1,
+    "left": null,
+    "right": null
+   }
+  },
+  "afterRemove": {
+   "key": 50,
+   "metadata": {
+    "id": 50,
+    "trackingCode": "AMZ-BF-00050",
+    "destination": "CNF-MG (Betim)",
+    "priority": "Standard"
+   },
+   "height": 3,
+   "color": "BLACK",
+   "blackHeight": 2,
+   "left": {
+    "key": 25,
+    "metadata": {
+     "id": 25,
+     "trackingCode": "TBA-BR-00025",
+     "destination": "GIG-RJ (São João de Meriti)",
+     "priority": "Same-Day"
+    },
+    "height": 2,
+    "color": "RED",
+    "blackHeight": 1,
+    "left": {
+     "key": 10,
+     "metadata": {
+      "id": 10,
+      "trackingCode": "AMZ-BF-00010",
+      "destination": "CNF-MG (Betim)",
+      "priority": "Same-Day"
+     },
+     "height": 1,
+     "color": "BLACK",
+     "blackHeight": 1,
+     "left": null,
+     "right": null
+    },
+    "right": {
+     "key": 30,
+     "metadata": {
+      "id": 30,
+      "trackingCode": "AMZ-BF-00030",
+      "destination": "BSB-DF (Santa Maria)",
+      "priority": "Prime Express"
+     },
+     "height": 1,
+     "color": "BLACK",
+     "blackHeight": 1,
+     "left": null,
+     "right": null
+    }
+   },
+   "right": {
+    "key": 80,
+    "metadata": {
+     "id": 80,
+     "trackingCode": "AMZ-BF-00080",
+     "destination": "GRU-SP (Cajamar)",
+     "priority": "Standard"
+    },
+    "height": 1,
+    "color": "BLACK",
+    "blackHeight": 1,
+    "left": null,
+    "right": null
+   }
+  },
+  "inOrder": [
+   10,
+   25,
+   30,
+   50,
+   80
+  ],
+  "metrics": {
+   "nodeCount": 5,
+   "height": 3,
+   "blackHeight": 2,
+   "totalRotations": 0,
+   "leftRotations": 0,
+   "rightRotations": 0,
+   "doubleRotations": 0,
+   "recolorings": 8,
+   "totalComparisons": 22,
+   "successfulInserts": 6,
+   "duplicateAttempts": 1,
+   "successfulRemovals": 1,
+   "missingRemovals": 1,
+   "successfulSearches": 1,
+   "missingSearches": 1
+  },
+  "valid": {
+   "isValid": true,
+   "checks": [
+    {
+     "name": "Propriedade de Busca Binária (BST)",
+     "passed": true,
+     "description": "Chaves seguem estritamente a ordenação esquerda < pai < direita."
+    },
+    {
+     "name": "Propriedade 2: Raiz é Sempre Preta",
+     "passed": true,
+     "description": "Raiz atual (#50) possui cor BLACK."
+    },
+    {
+     "name": "Propriedade 4: Sem Nós Vermelhos Consecutivos",
+     "passed": true,
+     "description": "Nenhum nó VERMELHO possui filho VERMELHO."
+    },
+    {
+     "name": "Propriedade 5: Altura Negra Uniforme (Black-Height)",
+     "passed": true,
+     "description": "Todos os caminhos da raiz às folhas possuem a mesma quantidade de nós pretos (BH = 2)."
+    }
+   ]
+  }
+ },
+ "scenarios": [
+  {
+   "id": "ascending",
+   "title": "1. Inserção em Ordem Crescente (10 a 150)",
+   "ops": 15,
+   "allStepsValid": true,
+   "inOrderMatch": true,
+   "avl": {
+    "height": 4,
+    "rotations": 11,
+    "comparisons": 45,
+    "nodes": 15,
+    "duplicates": 0,
+    "missingRemovals": 0,
+    "missingSearches": 0,
+    "validation": true
+   },
+   "rb": {
+    "height": 6,
+    "rotations": 9,
+    "recolorings": 45,
+    "comparisons": 53,
+    "nodes": 15,
+    "duplicates": 0,
+    "missingRemovals": 0,
+    "missingSearches": 0,
+    "validation": true
+   }
+  },
+  {
+   "id": "descending",
+   "title": "2. Inserção em Ordem Decrescente (150 a 10)",
+   "ops": 15,
+   "allStepsValid": true,
+   "inOrderMatch": true,
+   "avl": {
+    "height": 4,
+    "rotations": 11,
+    "comparisons": 45,
+    "nodes": 15,
+    "duplicates": 0,
+    "missingRemovals": 0,
+    "missingSearches": 0,
+    "validation": true
+   },
+   "rb": {
+    "height": 6,
+    "rotations": 9,
+    "recolorings": 45,
+    "comparisons": 53,
+    "nodes": 15,
+    "duplicates": 0,
+    "missingRemovals": 0,
+    "missingSearches": 0,
+    "validation": true
+   }
+  },
+  {
+   "id": "unordered-mix",
+   "title": "3. Carga Não Ordenada + Duplicatas + Buscas",
+   "ops": 13,
+   "allStepsValid": true,
+   "inOrderMatch": true,
+   "avl": {
+    "height": 4,
+    "rotations": 4,
+    "comparisons": 30,
+    "nodes": 10,
+    "duplicates": 1,
+    "missingRemovals": 0,
+    "missingSearches": 1,
+    "validation": true
+   },
+   "rb": {
+    "height": 4,
+    "rotations": 0,
+    "recolorings": 11,
+    "comparisons": 29,
+    "nodes": 10,
+    "duplicates": 1,
+    "missingRemovals": 0,
+    "missingSearches": 1,
+    "validation": true
+   }
+  },
+  {
+   "id": "removals-children",
+   "title": "4. Remoções: 0, 1 e 2 Filhos + Inexistente",
+   "ops": 15,
+   "allStepsValid": true,
+   "inOrderMatch": true,
+   "avl": {
+    "height": 3,
+    "rotations": 3,
+    "comparisons": 35,
+    "nodes": 6,
+    "duplicates": 0,
+    "missingRemovals": 1,
+    "missingSearches": 0,
+    "validation": true
+   },
+   "rb": {
+    "height": 3,
+    "rotations": 3,
+    "recolorings": 21,
+    "comparisons": 31,
+    "nodes": 6,
+    "duplicates": 0,
+    "missingRemovals": 1,
+    "missingSearches": 0,
+    "validation": true
+   }
+  },
+  {
+   "id": "edge-cases",
+   "title": "5. Casos Limite: Árvore Vazia e Único Elemento",
+   "ops": 10,
+   "allStepsValid": true,
+   "inOrderMatch": true,
+   "avl": {
+    "height": 2,
+    "rotations": 0,
+    "comparisons": 6,
+    "nodes": 3,
+    "duplicates": 1,
+    "missingRemovals": 2,
+    "missingSearches": 1,
+    "validation": true
+   },
+   "rb": {
+    "height": 2,
+    "rotations": 0,
+    "recolorings": 2,
+    "comparisons": 6,
+    "nodes": 3,
+    "duplicates": 1,
+    "missingRemovals": 2,
+    "missingSearches": 1,
+    "validation": true
+   }
+  },
+  {
+   "id": "black-friday-stress",
+   "title": "6. Stress Test Black Friday (31 Operações Mistas)",
+   "ops": 31,
+   "allStepsValid": true,
+   "inOrderMatch": true,
+   "avl": {
+    "height": 5,
+    "rotations": 10,
+    "comparisons": 105,
+    "nodes": 18,
+    "duplicates": 0,
+    "missingRemovals": 1,
+    "missingSearches": 1,
+    "validation": true
+   },
+   "rb": {
+    "height": 6,
+    "rotations": 9,
+    "recolorings": 45,
+    "comparisons": 106,
+    "nodes": 18,
+    "duplicates": 0,
+    "missingRemovals": 1,
+    "missingSearches": 1,
+    "validation": true
+   }
+  }
+ ]
+}
